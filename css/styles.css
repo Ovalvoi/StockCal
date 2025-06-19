@@ -1,0 +1,215 @@
+/* Apply a base font to the body */
+body {
+  font-family: Montserrat, sans-serif;
+  background-color: #fcfcfc;
+  color: #212529;
+  /* Default Bootstrap text color */
+}
+
+/* Custom styles for the background canvas */
+#stock-chart {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  overflow: hidden;
+}
+
+/* Base style for custom cards */
+.custom-card {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(204, 204, 204, 0.5);
+  border-radius: 5px;
+}
+
+/* Re-implementing original calculator layout */
+.calculator-container div {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  /* Allow wrapping on small screens */
+}
+
+.calculator-container label {
+  width: 200px;
+  text-align: left;
+  margin-right: 30px;
+  white-space: nowrap;
+}
+
+.calculator-container input {
+  flex-grow: 1;
+  /* Allow input to fill remaining space */
+  width: 150px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Re-implementing original button style */
+.calculator-container button {
+  width: 170px;
+  padding: 10px;
+  background-color: #4CAF50;
+  /* Original color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: Montserrat, sans-serif;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.calculator-container button:hover {
+  background-color: #307b34;
+  /* Original hover color */
+}
+
+
+.result-container {
+  font-weight: bold;
+}
+
+.red-text {
+  font-weight: bold;
+  color: #D9534F;
+}
+
+.invalid {
+  border: 2px solid red !important;
+  background-color: #ffe6e6 !important;
+}
+
+.green-text {
+  color: #4CAF50;
+  /* Using original green color */
+  font-weight: bold;
+}
+
+/* --- Dark Mode Styles --- */
+body.dark-mode {
+  background-color: #121212;
+  color: #dee2e6;
+  /* Light gray for body text */
+}
+
+/* More specific rules to override Bootstrap defaults */
+body.dark-mode .custom-card {
+  background-color: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #dee2e6;
+}
+
+body.dark-mode h1,
+body.dark-mode h2 {
+  color: #ffffff;
+}
+
+body.dark-mode label {
+  color: #dee2e6;
+}
+
+body.dark-mode input {
+  background-color: #2a2a2a;
+  border-color: #444;
+  color: #ffffff;
+}
+
+body.dark-mode .green-text {
+  color: #4CAF50;
+  /* Ensure green text stays the same */
+}
+
+body.dark-mode .red-text {
+  color: #D9534F;
+  /* Ensure red text stays the same */
+}
+
+/* --- Dark Mode Toggle Switch --- */
+.dark-mode-toggle {
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+  top: 10px;
+  right: 10px;
+  width: 60px;
+  height: 34px;
+  display: flex;
+  z-index: 1000;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked+.slider {
+  background-color: #2a2a2a;
+}
+
+input:checked+.slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* --- Responsive adjustments for the calculator layout --- */
+@media (max-width: 576px) {
+  .calculator-container div {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .calculator-container label {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 5px;
+  }
+
+  .calculator-container input {
+    width: 100%;
+  }
+
+  .calculator-container button {
+    width: 100%;
+  }
+}
