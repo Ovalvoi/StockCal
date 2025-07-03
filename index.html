@@ -68,42 +68,27 @@
             <div id="investment-result" class="result-container mt-4"></div>
           </div>
         </div>
-
         <div class="card custom-card">
           <div class="card-body">
-            <div class="ratio ratio-16x9">
-              <iframe id='st_fad408d216e64b44b2b8a897262c071b' frameBorder='0' scrolling='no' allowtransparency="true"
-                style="background-color: transparent;"
-                src='https://api.stockdio.com/visualization/financial/charts/v1/QuoteBoard?app-key=C897D0C99BEB4132908F4ECE895CE039&symbols=AAPL;MSFT;2222.SR;GOOGL;AMZN;NVDA;META;BRK.A;TSLA;LLY;TSM;AVGO;V;JPM;WMT;MC.PA;UNH;MA;NVO;PG&showCurrency=true&includeVolume=true&palette=Relief&background-color=transparent&title=Watch%20List&font=Montserrat&googleFont=true&onload=st_fad408d216e64b44b2b8a897262c071b'></iframe>
+            <h5 class="text-center mb-3">Market End Day Stock Prices</h5>
+            <div id="stock-ticker-container">
+              
             </div>
           </div>
         </div>
-
       </div>
     </div>
   </main>
 
+
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
-
   <script src="js/script.js?v=3.0"></script>
   <script src="js/darkmode.js"></script>
   <script src="js/chart.js"></script>
-
-  <script>
-    if (typeof (stockdio_events) == "undefined") {
-      stockdio_events = true;
-      var stockdio_eventMethod = window.addEventListener ? "addEventListener" : "attachEvent";
-      var stockdio_eventer = window[stockdio_eventMethod];
-      var stockdio_messageEvent = stockdio_eventMethod == "attachEvent" ? "onmessage" : "message";
-      stockdio_eventer(stockdio_messageEvent, function (e) {
-        if (typeof (e.data) != "undefined" && typeof (e.data.method) != "undefined") {
-          eval(e.data.method);
-        }
-      }, false);
-    }
-  </script>
+  <script src="js/stock.js"></script>
 </body>
 
 </html>

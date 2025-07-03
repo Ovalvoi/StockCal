@@ -213,3 +213,10 @@ input:checked+.slider:before {
     width: 100%;
   }
 }
+
+.company-name{
+  font-size: 0.7rem;
+  color: #b5b5b5; /* Bootstrap's text-muted color */
+  text-align: center;
+  margin-top: 5px;
+}
