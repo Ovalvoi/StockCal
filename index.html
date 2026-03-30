@@ -59,6 +59,11 @@
                 <input type="text" id="moneyInvested" inputmode="numeric" pattern="[0-9eE\-\.]*"
                   aria-label="Money invested, optional" placeholder="Enter number">
               </div>
+              <div>
+                <label for="taxRate">Estimated Tax Rate (%):</label>
+                <input type="text" id="taxRate" inputmode="numeric" pattern="[0-9eE\-\.]*"
+                  aria-label="Estimated tax rate percentage" placeholder="Enter tax % (e.g., 15)">
+              </div>
               <div class="text-center">
                 <button onclick="calculateInvestmentResults()"
                   aria-label="Calculate investment results">Calculate</button>
@@ -79,8 +84,6 @@
       </div>
     </div>
   </main>
-
-
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
