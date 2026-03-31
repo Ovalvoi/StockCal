@@ -62,7 +62,7 @@
               <div>
                 <label for="taxRate">Estimated Tax Rate (%):</label>
                 <input type="text" id="taxRate" inputmode="numeric" pattern="[0-9eE\-\.]*"
-                  aria-label="Estimated tax rate percentage" placeholder="Enter tax % (e.g., 15)">
+                  aria-label="Estimated tax rate percentage" placeholder="Enter tax % (e.g., 25)">
               </div>
               <div class="text-center">
                 <button onclick="calculateInvestmentResults()"
@@ -71,13 +71,39 @@
             </div>
 
             <div id="investment-result" class="result-container mt-4"></div>
-          </div>
-        </div>
-        <div class="card custom-card">
-          <div class="card-body">
-            <h5 class="text-center mb-3">Market End Day Stock Prices</h5>
-            <div id="stock-ticker-container">
-              
+
+            <div class="link-row">
+              <a href="https://github.com/Ovalvoi/Stockcal" target="_blank" rel="noopener noreferrer" class="brand-link d-inline-flex align-items-center gap-2">
+                <svg width="24" height="24" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+                  <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.63 7.63 0 0 1 2.01-.27c.68 0 1.36.09 2.01.27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.19 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+                </svg>
+                <span>GitHub</span>
+              </a>
+              <a href="https://finance.yahoo.com" target="_blank" rel="noopener noreferrer" class="brand-link d-inline-flex align-items-center gap-2">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M6 6l6 6 6-6" />
+                  <path d="M12 12v6" />
+                </svg>
+                <span>Yahoo Finance</span>
+              </a>
+              <a href="https://www.google.com/finance" target="_blank" rel="noopener noreferrer" class="brand-link d-inline-flex align-items-center gap-2">
+                <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M12 4.5c-4.14 0-7.5 3.36-7.5 7.5s3.36 7.5 7.5 7.5c3.35 0 6.18-2.14 7.16-5.12" fill="none" stroke="currentColor" stroke-width="2" />
+                  <path d="M12 4.5h8.5v8.5" fill="none" stroke="currentColor" stroke-width="2" />
+                  <path d="M12 12h8.5" fill="none" stroke="currentColor" stroke-width="2" />
+                </svg>
+                <span>Google Finance</span>
+              </a>
+              <a href="https://finviz.com" target="_blank" rel="noopener noreferrer" class="brand-link d-inline-flex align-items-center gap-2">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M5 18v-8" />
+                  <path d="M9 18v-4" />
+                  <path d="M13 18v-6" />
+                  <path d="M17 18v-2" />
+                  <path d="M5 18h12" />
+                </svg>
+                <span>Finviz</span>
+              </a>
             </div>
           </div>
         </div>
